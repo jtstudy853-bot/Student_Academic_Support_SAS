@@ -36,7 +36,6 @@
   </div>
 </div>
 
-<!-- MARQUEE BAND — pure CSS, no JS needed, no horizontal scroll -->
 <div class="band-outer">
   <div class="band-track">
     <span class="band-item">Peer-to-peer tutoring</span><div class="band-dot"></div>
@@ -47,7 +46,6 @@
     <span class="band-item">Student-led</span><div class="band-dot"></div>
     <span class="band-item">Exam preparation</span><div class="band-dot"></div>
     <span class="band-item">Build confidence</span><div class="band-dot"></div>
-    <!-- duplicate for seamless loop -->
     <span class="band-item">Peer-to-peer tutoring</span><div class="band-dot"></div>
     <span class="band-item">Small group learning</span><div class="band-dot"></div>
     <span class="band-item">Structured sessions</span><div class="band-dot"></div>
@@ -191,47 +189,45 @@
           <div class="cal-day-header">Fri</div>
           <div class="cal-day-header">Sat</div>
           <div class="cal-day-header">Sun</div>
-          <!-- July 1 = Tuesday → 1 empty cell for Mon -->
           <div class="cal-day empty"></div>
-          <div class="cal-day inactive">1</div><!-- Tue — session day but it's Wed/Thu -->
+          <div class="cal-day inactive">1</div>
           <div class="cal-day active" title="T3W1 · 3–4PM · Rm 2-6">2</div>
           <div class="cal-day active" title="T3W1 · 3–4PM · Rm 2-6">3</div>
           <div class="cal-day inactive">4</div>
           <div class="cal-day inactive">5</div>
           <div class="cal-day inactive">6</div>
           <div class="cal-day inactive">7</div>
-          <div class="cal-day active" title="T3W2 · 3–4PM · Rm 2-6">8 <noscript></noscript></div>
-          <div class="cal-day active" title="T3W2 · 3–4PM · Rm 2-6">9</div>
-          <div class="cal-day inactive">10</div>
+          <div class="cal-day active" title="T3W2 · 3–4PM · Rm 2-6">8</div>
+          <div class="cal-day inactive">9</div>
+          <div class="cal-day active" title="T3W2 · 3–4PM · Rm 2-6">10</div>
           <div class="cal-day inactive">11</div>
           <div class="cal-day inactive">12</div>
           <div class="cal-day inactive">13</div>
           <div class="cal-day inactive">14</div>
-          <!-- T3W3: HBL — 15 Wed, 16 Thu -->
-          <div class="cal-day inactive">15</div>
+          <div class="cal-day inactive" style="opacity:0.3;text-decoration:line-through;" title="T3W3 HBL">15</div>
           <div class="cal-day inactive" style="opacity:0.3;text-decoration:line-through;" title="T3W3 HBL">16</div>
-          <div class="cal-day inactive" style="opacity:0.3;text-decoration:line-through;" title="T3W3 HBL">17</div>
+          <div class="cal-day inactive">17</div>
           <div class="cal-day inactive">18</div>
           <div class="cal-day inactive">19</div>
           <div class="cal-day inactive">20</div>
           <div class="cal-day inactive">21</div>
           <div class="cal-day active" title="T3W4 · 3–4PM · Rm 2-6">22</div>
-          <div class="cal-day active" title="T3W4 · 3–4PM · Rm 2-6">23</div>
-          <div class="cal-day inactive">24</div>
+          <div class="cal-day inactive">23</div>
+          <div class="cal-day active" title="T3W4 · 3–4PM · Rm 2-6">24</div>
           <div class="cal-day inactive">25</div>
           <div class="cal-day inactive">26</div>
           <div class="cal-day inactive">27</div>
           <div class="cal-day inactive">28</div>
           <div class="cal-day active" title="T3W5 · 3–4PM · Rm 2-6">29</div>
-          <div class="cal-day active" title="T3W5 · 3–4PM · Rm 2-6">30</div>
-          <div class="cal-day inactive">31</div>
+          <div class="cal-day inactive">30</div>
+          <div class="cal-day active" title="T3W5 · 3–4PM · Rm 2-6">31</div>
           <div class="cal-day empty"></div>
           <div class="cal-day empty"></div>
           <div class="cal-day empty"></div>
         </div>
         <div class="cal-legend">
           <div class="cal-legend-item"><div class="legend-dot session"></div> Session day</div>
-          <div class="cal-legend-item" style="opacity:0.5;text-decoration:line-through;">16, 17 — HBL (no session)</div>
+          <div class="cal-legend-item" style="opacity:0.5;text-decoration:line-through;">15, 16 — HBL (no session)</div>
         </div>
       </div>
 
@@ -246,7 +242,6 @@
           <div class="cal-day-header">Fri</div>
           <div class="cal-day-header">Sat</div>
           <div class="cal-day-header">Sun</div>
-          <!-- Aug 1 = Friday → 4 empty cells -->
           <div class="cal-day empty"></div>
           <div class="cal-day empty"></div>
           <div class="cal-day empty"></div>
@@ -256,15 +251,15 @@
           <div class="cal-day inactive">3</div>
           <div class="cal-day inactive">4</div>
           <div class="cal-day active" title="T3W6 · 3–4PM · Rm 2-6">5</div>
-          <div class="cal-day active" title="T3W6 · 3–4PM · Rm 2-6">6</div>
-          <div class="cal-day inactive">7</div>
+          <div class="cal-day inactive">6</div>
+          <div class="cal-day active" title="T3W6 · 3–4PM · Rm 2-6">7</div>
           <div class="cal-day inactive">8</div>
           <div class="cal-day inactive">9</div>
           <div class="cal-day inactive">10</div>
           <div class="cal-day inactive">11</div>
           <div class="cal-day active" title="T3W7 · 3–4PM · Rm 2-6">12</div>
-          <div class="cal-day active" title="T3W7 · 3–4PM · Rm 2-6">13</div>
-          <div class="cal-day inactive">14</div>
+          <div class="cal-day inactive">13</div>
+          <div class="cal-day active" title="T3W7 · 3–4PM · Rm 2-6">14</div>
           <div class="cal-day inactive">15</div>
           <div class="cal-day inactive">16</div>
           <div class="cal-day inactive">17</div>
@@ -302,37 +297,37 @@
       </div>
       <div class="session-row">
         <span class="session-week">T3W2</span>
-        <span class="session-dates">Wed 8 Jul &amp; Thu 9 Jul</span>
+        <span class="session-dates">Wed 8 Jul &amp; Thu 10 Jul</span>
         <span class="session-meta">3:00 – 4:00 PM · Rm 2-6</span>
         <span class="session-tag">Session</span>
       </div>
       <div class="session-row">
         <span class="session-week">T3W3</span>
-        <span class="session-dates hbl">Wed 16 Jul &amp; Thu 17 Jul — HBL</span>
+        <span class="session-dates hbl">Wed 15 Jul &amp; Thu 16 Jul — HBL</span>
         <span class="session-meta" style="color:rgba(252,251,248,0.2)">No session</span>
         <span class="session-tag" style="background:rgba(255,255,255,0.06);color:rgba(252,251,248,0.25);">HBL</span>
       </div>
       <div class="session-row">
         <span class="session-week">T3W4</span>
-        <span class="session-dates">Wed 22 Jul &amp; Thu 23 Jul</span>
+        <span class="session-dates">Wed 22 Jul &amp; Thu 24 Jul</span>
         <span class="session-meta">3:00 – 4:00 PM · Rm 2-6</span>
         <span class="session-tag">Session</span>
       </div>
       <div class="session-row">
         <span class="session-week">T3W5</span>
-        <span class="session-dates">Wed 29 Jul &amp; Thu 30 Jul</span>
+        <span class="session-dates">Wed 29 Jul &amp; Thu 31 Jul</span>
         <span class="session-meta">3:00 – 4:00 PM · Rm 2-6</span>
         <span class="session-tag">Session</span>
       </div>
       <div class="session-row">
         <span class="session-week">T3W6</span>
-        <span class="session-dates">Wed 5 Aug &amp; Thu 6 Aug</span>
+        <span class="session-dates">Wed 5 Aug &amp; Thu 7 Aug</span>
         <span class="session-meta">3:00 – 4:00 PM · Rm 2-6</span>
         <span class="session-tag">Session</span>
       </div>
       <div class="session-row">
         <span class="session-week">T3W7</span>
-        <span class="session-dates">Wed 12 Aug &amp; Thu 13 Aug</span>
+        <span class="session-dates">Wed 12 Aug &amp; Thu 14 Aug</span>
         <span class="session-meta">3:00 – 4:00 PM · Rm 2-6</span>
         <span class="session-tag">Session</span>
       </div>
@@ -350,7 +345,6 @@
       <a class="btn-orange" href="https://docs.google.com/forms/d/e/1FAIpQLSd0qlU2J_HEHA-fg1ALyNnODJMjIiXvLSZNY9cTjZfmzyUw3A/viewform?pli=1" target="_blank" rel="noopener">Join SAS now →</a>
     </div>
     <div class="join-action">
-      <!-- QR CODE: replace the src value with just your filename, e.g. src="my-qr-code.png" -->
       <div class="qr-box">
         <img src="d524783f63179a745ef036fe53e4cc0b.png" alt="QR Code to join SAS" width="196" height="196"
           onerror="this.parentElement.innerHTML='<div class=\'qr-placeholder\'><svg viewBox=\'0 0 24 24\'><rect x=\'3\' y=\'3\' width=\'7\' height=\'7\' rx=\'1\'/><rect x=\'14\' y=\'3\' width=\'7\' height=\'7\' rx=\'1\'/><rect x=\'3\' y=\'14\' width=\'7\' height=\'7\' rx=\'1\'/><rect x=\'5\' y=\'5\' width=\'3\' height=\'3\'/><rect x=\'16\' y=\'5\' width=\'3\' height=\'3\'/><rect x=\'5\' y=\'16\' width=\'3\' height=\'3\'/></svg><span>Add your QR image file here</span></div>'">
@@ -367,7 +361,7 @@
 </div>
 
 <footer>
-  <p>2026 Student Academic Support (SAS)</p>
+  <p>© 2025 Student Academic Support (SAS)</p>
   <p>A student-led initiative for the school community.</p>
 </footer>
 
