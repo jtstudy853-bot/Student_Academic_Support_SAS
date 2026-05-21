@@ -113,4 +113,21 @@
     linkInput.addEventListener('blur', () => setTimeout(() => { copyBtn.style.display = 'none'; }, 200));
   }
 
+  /* 7. SUBJECTS BAR CHART ANIMATION */
+  const chartBars = document.querySelectorAll('.chart-bar');
+  if (chartBars.length) {
+    const barObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('animated');
+          barObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    chartBars.forEach((bar, i) => {
+      bar.style.transitionDelay = `${i * 0.08}s`;
+      barObserver.observe(bar);
+    });
+  }
+
 })();
