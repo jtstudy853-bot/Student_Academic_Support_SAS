@@ -47,7 +47,7 @@
   sections.forEach(s => sectionObserver.observe(s));
 
   /* 4. SCROLL-TRIGGERED FADE IN */
-  const fadeTargets = '.step-card, .offer-card, .why-card, .stat-card, .about-text, .section-title, .section-label, .join-text, .join-action, .session-row, .cal-month';
+  const fadeTargets = '.step-card, .offer-card, .why-card, .stat-card, .about-text, .section-title, .section-label, .join-text, .join-action, .session-row, .cal-month, .focus-card, .subjects-chart, .focus-intro-row';
   const fadeEls = document.querySelectorAll(fadeTargets);
   fadeEls.forEach((el, i) => {
     el.classList.add('sas-fade');
@@ -89,7 +89,36 @@
     if (!el.textContent.includes('∞')) statObserver.observe(el);
   });
 
-  /* 6. JOIN — LINK INPUT COPY BUTTON */
+  /* 6. SUBJECTS BAR CHART ANIMATION */
+  const chartBars = document.querySelectorAll('.chart-bar');
+  if (chartBars.length) {
+    // Set the CSS custom property for each bar's target width from data-width attribute
+    chartBars.forEach(bar => {
+      const pct = bar.getAttribute('data-width');
+      // Scale to max 100% of the track (data is already a percentage of 22 responses,
+      // so we map the largest value 63.6% to fill ~100% of the bar track)
+      const scaled = (parseFloat(pct) / 63.6) * 100;
+      bar.style.setProperty('--bar-target', `${scaled}%`);
+    });
+
+    const barObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          // Stagger each bar slightly
+          chartBars.forEach((bar, i) => {
+            bar.style.transitionDelay = `${i * 0.09}s`;
+            bar.classList.add('animated');
+          });
+          barObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const chartSection = document.querySelector('.subjects-chart');
+    if (chartSection) barObserver.observe(chartSection);
+  }
+
+  /* 7. JOIN — LINK INPUT COPY BUTTON */
   const linkInput = document.querySelector('.link-input');
   const linkArea = document.querySelector('.link-area');
   if (linkInput && linkArea) {
@@ -111,23 +140,6 @@
     linkInput.addEventListener('focus', showHide);
     linkInput.addEventListener('input', showHide);
     linkInput.addEventListener('blur', () => setTimeout(() => { copyBtn.style.display = 'none'; }, 200));
-  }
-
-  /* 7. SUBJECTS BAR CHART ANIMATION */
-  const chartBars = document.querySelectorAll('.chart-bar');
-  if (chartBars.length) {
-    const barObserver = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('animated');
-          barObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    chartBars.forEach((bar, i) => {
-      bar.style.transitionDelay = `${i * 0.08}s`;
-      barObserver.observe(bar);
-    });
   }
 
 })();
